@@ -45,14 +45,14 @@ public class ListFrag extends ListFragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        ArrayList<String> data = new ArrayList<String>();
-
-        data.add("1. This is iteam 1");
-        data.add("2. This is iteam 2");
-        data.add("3. This is iteam 3");
+        String [] data = getResources().getStringArray(R.array.pieces);
 
         setListAdapter(new ArrayAdapter<String >(getActivity(), android.R.layout.simple_list_item_1, data));
-        activity.onItemSelected(0);
+
+        // if phone is in landscape mode
+        if(this.getActivity().findViewById(R.id.layout_land) != null) {
+            activity.onItemSelected(0);
+        }
     }
 
     // this method tells about extactly which iteam in the list is clicked
