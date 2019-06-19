@@ -16,9 +16,18 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
 
     private ArrayList<Person> people;
 
+    ItemClicked activity;
+
+    public interface ItemClicked
+    {
+        void onItemclicked(int index);
+    }
+
     public PersonAdapter(Context context, ArrayList<Person> list)
     {
+
         people = list;
+        activity = (ItemClicked) context;
     }
 
     // this method will represt what we will do in person java class and list_item xml file
@@ -28,7 +37,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
         ImageView ivPref;
         TextView tvName, tvSurname;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull final View itemView) {
             super(itemView);
 
             tvName = itemView.findViewById(R.id.tvName);
@@ -38,6 +47,8 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    activity.onItemclicked(people.indexOf((Person) v.getTag()));
 
                 }
             });
