@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/back1"
+        android:cursorVisible="true"
+        android:elevation="100dp"
+        android:gravity="center"
+        android:hint="Enter you amount (Rupees)"
+        android:inputType="number"
+        android:textCursorDrawable="@color/colorPrimaryDark"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/disp"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/amount"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/back1"
+        android:elevation="100dp"
+        android:gravity="center"
+        android:hint="Result"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/euro"
+            android:onClick="onClick"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/tap1"
+            android:text="EURO"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:elevation="100dp"
+            android:shadowColor="@android:color/darker_gray"/>
+
+        <Button
+            android:id="@+id/yen"
+            android:onClick="onClick"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/tap2"
+            android:text="Yen"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:elevation="100dp"
+            android:shadowColor="@android:color/darker_gray"/>
+
+        <Button
+            android:id="@+id/usd"
+            android:onClick="onClick"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/tap3"
+            android:text="USD"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:elevation="100dp"
+            android:shadowColor="@android:color/darker_gray"/>
+
+
+        </LinearLayout>
+
+</LinearLayout>
